@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1A0688F02A39D79A00479019 /* WingsControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0688EF2A39D79A00479019 /* WingsControllerApp.swift */; };
-		1A0688F22A39D79A00479019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0688F12A39D79A00479019 /* ContentView.swift */; };
+		1A0688F22A39D79A00479019 /* WingsControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0688F12A39D79A00479019 /* WingsControllerView.swift */; };
 		1A0688F42A39D79B00479019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0688F32A39D79B00479019 /* Assets.xcassets */; };
 		1A0688F72A39D79B00479019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0688F62A39D79B00479019 /* Preview Assets.xcassets */; };
+		1A0689002A39DF2700479019 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1A0688FF2A39DF2700479019 /* ComposableArchitecture */; };
+		1A0689022A39DF9700479019 /* WingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0689012A39DF9700479019 /* WingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A0688EC2A39D79A00479019 /* WingsController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WingsController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0688EF2A39D79A00479019 /* WingsControllerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingsControllerApp.swift; sourceTree = "<group>"; };
-		1A0688F12A39D79A00479019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A0688F12A39D79A00479019 /* WingsControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingsControllerView.swift; sourceTree = "<group>"; };
 		1A0688F32A39D79B00479019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0688F62A39D79B00479019 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A0688FD2A39D89B00479019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1A0689012A39DF9700479019 /* WingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0689002A39DF2700479019 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +56,10 @@
 		1A0688EE2A39D79A00479019 /* WingsController */ = {
 			isa = PBXGroup;
 			children = (
+				1A0688FD2A39D89B00479019 /* Info.plist */,
 				1A0688EF2A39D79A00479019 /* WingsControllerApp.swift */,
-				1A0688F12A39D79A00479019 /* ContentView.swift */,
+				1A0688F12A39D79A00479019 /* WingsControllerView.swift */,
+				1A0689012A39DF9700479019 /* WingsController.swift */,
 				1A0688F32A39D79B00479019 /* Assets.xcassets */,
 				1A0688F52A39D79B00479019 /* Preview Content */,
 			);
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = WingsController;
+			packageProductDependencies = (
+				1A0688FF2A39DF2700479019 /* ComposableArchitecture */,
+			);
 			productName = WingsController;
 			productReference = 1A0688EC2A39D79A00479019 /* WingsController.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 1A0688E32A39D79A00479019;
+			packageReferences = (
+				1A0688FE2A39DF2700479019 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 1A0688ED2A39D79A00479019 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0688F22A39D79A00479019 /* ContentView.swift in Sources */,
+				1A0688F22A39D79A00479019 /* WingsControllerView.swift in Sources */,
+				1A0689022A39DF9700479019 /* WingsController.swift in Sources */,
 				1A0688F02A39D79A00479019 /* WingsControllerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +284,7 @@
 				DEVELOPMENT_TEAM = 63497P68S6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WingsController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +314,7 @@
 				DEVELOPMENT_TEAM = 63497P68S6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WingsController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A0688FE2A39DF2700479019 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A0688FF2A39DF2700479019 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A0688FE2A39DF2700479019 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A0688E42A39D79A00479019 /* Project object */;
 }

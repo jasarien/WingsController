@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct WingsControllerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			WingsControllerView(
+				store: Store(
+					initialState: WingsController.State(mode: .manual(100)),
+					reducer: WingsController()
+				)
+			)
         }
     }
 }
