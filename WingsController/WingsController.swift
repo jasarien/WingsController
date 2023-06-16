@@ -48,7 +48,12 @@ struct WingsController: ReducerProtocol {
 		var previousPosition: Double = 100
 
 		var sliderDisabled: Bool {
-			mode == .auto
+			switch mode {
+			case .manual:
+				return false
+			default:
+				return true
+			}
 		}
 
 		init(mode: Mode) {
